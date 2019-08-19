@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn;
     DatabaseReference reff;
     Administrador admin;
+    Residente resident;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
         btn= (Button)findViewById(R.id.button);
         admin= new Administrador();
+        resident=new Residente();
         reff= FirebaseDatabase.getInstance().getReference().child("Perfil");
 
 
@@ -61,8 +63,24 @@ public class MainActivity extends AppCompatActivity {
                     admin.setEmail(txt8.getText().toString().trim());
 
                     reff.child("Administrador").child(admin.getCedula()).setValue(admin);
-                    Toast.makeText(MainActivity.this,"data success",Toast.LENGTH_LONG).show();
-            }
+                    Toast.makeText(MainActivity.this,"Administrador agregado exitosamente.",Toast.LENGTH_LONG).show();
+
+            } else if (seleccion.equals("Residente")){
+
+                    resident.setNombre1(txt1.getText().toString().trim());
+                    resident.setNombre2(txt2.getText().toString().trim());
+                    resident.setApellido1(txt3.getText().toString().trim());
+                    resident.setApellido2(txt4.getText().toString().trim());
+                    resident.setCedula(txt5.getText().toString().trim());
+                    resident.setUser(txt6.getText().toString().trim());
+                    resident.setPassword(txt7.getText().toString().trim());
+                    resident.setEmail(txt8.getText().toString().trim());
+
+                    reff.child("Residente").child(resident.getCedula()).setValue(resident);
+                    Toast.makeText(MainActivity.this,"Residente agregado exitosamente.",Toast.LENGTH_LONG).show();
+
+
+                }
             }
         });
 
