@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class MainActivity extends AppCompatActivity {
+public class AgregarActivity extends AppCompatActivity {
 
     EditText txt1,txt2,txt3,txt4,txt5,txt6,txt7,txt8;
     Spinner sp2;
@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toast.makeText(MainActivity.this, "Conexion Establecida",Toast.LENGTH_LONG).show();
+        setContentView(R.layout.activity_agregar);
+        Toast.makeText(AgregarActivity.this, "Conexion Establecida",Toast.LENGTH_LONG).show();
 
         txt1= (EditText)findViewById(R.id.editText);
         txt2= (EditText)findViewById(R.id.editText2);
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                     admin.setEmail(txt8.getText().toString().trim());
 
                     reff.child("Administrador").child(admin.getCedula()).setValue(admin);
-                    Toast.makeText(MainActivity.this,"Administrador agregado exitosamente.",Toast.LENGTH_LONG).show();
+                    Toast.makeText(AgregarActivity.this,"Administrador agregado exitosamente.",Toast.LENGTH_LONG).show();
 
             } else if (seleccion.equals("Residente")){
 
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     resident.setEmail(txt8.getText().toString().trim());
 
                     reff.child("Residente").child(resident.getCedula()).setValue(resident);
-                    Toast.makeText(MainActivity.this,"Residente agregado exitosamente.",Toast.LENGTH_LONG).show();
+                    Toast.makeText(AgregarActivity.this,"Residente agregado exitosamente.",Toast.LENGTH_LONG).show();
 
 
                 }
