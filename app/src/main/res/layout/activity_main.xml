@@ -13,43 +13,81 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
-        <EditText
-            android:id="@+id/editText3"
+        <Spinner
+            android:id="@+id/spinner2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="nombre"
-            android:inputType="textPersonName" />
+            android:layout_height="43dp" />
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="edad"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:text="Name1" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name2" />
 
         <EditText
             android:id="@+id/editText5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="tlfno"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:text="Apellido1" />
 
         <EditText
             android:id="@+id/editText6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="peso"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:text="Apellido2" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Cedula" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="User" />
+
+        <EditText
+            android:id="@+id/editText7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="password" />
+
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="email" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="guardar" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
